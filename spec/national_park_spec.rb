@@ -26,13 +26,13 @@ RSpec.describe NationalPark do
         expect(national_park.vehicles).to eq([vehicle_1, vehicle_2])
     end
 
-    # it "list of passengers" do
-    #     national_park.add_vehicle(vehicle_1)
+    it "list all passengers" do
+        national_park.add_vehicle(vehicle_1)
 
-    #     vehicle_1.add_passenger(charlie)
-    #     vehicle_1.add_passenger(jude)
+        vehicle_1.add_passenger(charlie)
+        vehicle_1.add_passenger(jude)
 
-    #     expect(national_park.vehicles).to eq([vehicle_1])
-    #     expect(national_park.list_all_passengers).to eq([charlie, jude])
-    # end
+        expect(national_park.vehicles).to eq([vehicle_1])
+        expect(national_park.list_all_passengers).to eq([charlie, jude])
+    end
 end
